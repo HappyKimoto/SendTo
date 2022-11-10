@@ -122,7 +122,7 @@ def main():
         elif os.path.isdir(dir_out):
             fp_lst_out = create_fp_lst_out(root_dir, fp_lst_in, dir_out)
         # write output
-        for fp_in, fp_out in tqdm(zip(fp_lst_in, fp_lst_out), total=len(fp_lst_in)):
+        for fp_in, fp_out in tqdm(zip(fp_lst_in, fp_lst_out), total=len(fp_lst_in), ascii=False):
             txt_out = format_xml(fp_in)
             write_bin(fp_out, txt_out)
     else:
